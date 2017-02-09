@@ -15,3 +15,39 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
 img {
   max-width: 100%;
 }
+.springfield{
+  width: 100%;
+  z-index: 5;
+}
+.bart{
+  position: absolute;
+  margin-top: -526px;
+    margin-left: 673px;
+  height: 200px;
+  width: 100px;
+  z-index: 10;
+}
+.lisa{
+  position: absolute;
+    margin-top: -509px;
+    margin-left: 704px;
+    height: 200px;
+    width: 129px;
+    z-index: 10;
+}
+.homer{
+  position: absolute;
+  margin-top: -611px;
+  margin-left: 373px;
+  height: 400px;
+  width: 200px;
+  z-index: 10;
+}
+.krusty{
+  position: absolute;
+margin-top: -588px;
+margin-left: 373px;
+height: 364px;
+width: 246px;
+z-index: 10;
+}
