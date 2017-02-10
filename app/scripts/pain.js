@@ -40,3 +40,8 @@ var painInflicted3 = function(){
   }
 };
 console.log(painInflicted3());
+module.exports = {
+  painInflicted:painInflicted,
+  painInflicted2:painInflicted2,
+  painInflicted3:painInflicted3
+};
