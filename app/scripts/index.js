@@ -6,33 +6,22 @@ var Handlebars = require('handlebars');
 var splashTemplate = require('../templates/splash.hbs');
 var gameTemplate = require('../templates/fight.hbs');
 
-
-
-
-console.log('models', models);
-
 //make a page to select hero type from dropdown
 (function startGame(){
 
-  // console.log(myHero);
-  // set selectedHero
-  // currentHero = models[selectedHero]
   console.log($('#choose-character'));
   $('#choose-character').html(splashTemplate());
 
   $('.start-game').on('click', function(event){
     event.preventDefault();
-    var myHero = $('.hero-select').val();
+    var myHero = $('.hero-select').val();// set selectedHero
     var myVillian = $('.villian-select').val();
 
     $('#choose-character').empty();
-    $('#choose-character').append(gameTemplate(models[myHero]));
+    $('#choose-character').append(gameTemplate(models[myHero]));// currentHero = models[selectedHero]
     $('#choose-character').append(gameTemplate(models[myVillian]));
   });
 }());
-
-
-//make a page to select hero type from dropdown
 
 //show enemies list (allow to select enemy if have enough time/dont have to)
 

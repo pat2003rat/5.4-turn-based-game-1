@@ -22,20 +22,22 @@ function Hero(options){
 Hero.prototype.attack = function(villain){
   if(pain.painInflicted()){
     villain.health -= 20;
-  }  
+  }
 }
 // Hero.prototype = new Character ();
 
 var bart = new Hero({
   // attack:
   name: "bart",
-  image: "images/BARTslingshot-psd.png"
+  image: "images/BARTslingshot-psd.png",
+  animation: "shake-opacity"
 });
 
 var lisa = new Hero({
   // attack:
   name: "lisa",
-  image: "images/lisa.png"
+  image: "images/lisa.png",
+  animation: 'shake-vertical'
 });
 
 /*
@@ -53,12 +55,14 @@ function Villian(options){
 
 var homer = new Villian({
   name: 'homer',
-  image: 'images/homer-doh.png'
+  image: 'images/homer-doh.png',
+  animation: 'shake-slow'
 });
 
 var krusty = new Villian({
   name: 'krusty',
-  image: 'images/Krusty_The_Clown.png'
+  image: 'images/Krusty_The_Clown.png',
+  animation: 'shake-hard'
 })
 
 // Villian.prototype = new Character(){
