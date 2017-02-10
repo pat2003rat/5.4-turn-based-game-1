@@ -5,7 +5,6 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
 // Import Bootstrap
 @import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
 
-
 *,
 *::before,
 *::after {
@@ -51,6 +50,7 @@ margin-left: 373px;
 height: 364px;
 width: 246px;
 z-index: 10;
+}
 
 .splash-form {
   text-align: center;
