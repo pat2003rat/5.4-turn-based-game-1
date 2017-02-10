@@ -5,25 +5,23 @@
       <div class="heros">
         <h2>Choose Your Hero</h2>
       </div>
-        <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="heroDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            select hero
-            <span class='caret'></span>
-          </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">Bart</a>
-              <a class="dropdown-item" href="#">Lisa</a>
-            </div>
-          </div>
-        </div>
+        <select class="hero-select" name="select" value="select">
+          <option value="Bart">Bart</option>
+          <option value="Lisa">Lisa</option>
+        </select>
+      </div>
           <div class="col-md-6">
             <div class="heading">
               <h1>Villians</h1>
             </div>
-              <div class="heros">
+              <div class="villian">
                 <h2>Choose villian</h2>
               </div>
-                <div class="dropdown">
+                <select class="villian-select" name="">
+                  <option value="homer">Homer</option>
+                  <option value="lisa">Krusty</option>
+                </select>
+                <!-- <div class="dropdown">
                   <button class="btn btn-secondary dropdown-toggle" type="button" id="villianDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     select villian
                     <span class="caret"></span>
@@ -32,7 +30,7 @@
                     <a class="dropdown-item" href="#">Homer</a>
                     <a class="dropdown-item" href="#">Krusty</a>
                   </div>
-                </div>
+                </div> -->
               </div>
                 <form class="splash-form">
                   <label>

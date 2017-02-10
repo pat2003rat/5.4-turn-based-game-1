@@ -1,6 +1,6 @@
 // var $ = require ('jquery');
-// var index = require('../scripts/index.js')
-
+//
+//
 // function Character(){
 //
 // }

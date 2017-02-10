@@ -1,11 +1,12 @@
 
 var $ =  require('jquery');
-var models = require('../scripts/models');
+// var models = require('./models');
+var Handlebars = require('handlebars');
 
 var splashTemplate = require('../templates/splash.hbs');
 var gameTemplate = require('../templates/fight.hbs');
 
-// $('#choose-character').append(splashTemplate());
+//make a page to select hero type from dropdown
   $('#choose-character').html(splashTemplate());
 
   $('.start-game').click(function(event){
@@ -19,17 +20,21 @@ var gameTemplate = require('../templates/fight.hbs');
 
 
 
+
 //make a page to select hero type from dropdown
 
 //show enemies list (allow to select enemy if have enough time/dont have to)
 
-//float in players (stretch goal)
+//select enemy
 
-//say "who ever is computer" wants to fight
+
+//display selected Hero
+
+//display selected villian
 
 //user attack
 
-//say what user did attack was (stretch goal)
+//say what users attack was (stretch goal)
 
 //show damage to "computer" in health bar
 
