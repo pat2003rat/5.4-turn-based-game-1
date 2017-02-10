@@ -16,13 +16,20 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
   font-weight: bolder;
 }
 
+body{
+  background: url(images/springfield.jpg);
+  background-size: cover;
+}
+
 img {
   max-width: 100%;
 }
 
+
 .springfield{
   width: 100%;
   z-index: 5;
+
 }
 .bart{
   position: absolute;

@@ -1,19 +1,41 @@
 
 var $ =  require('jquery');
-// var models = require('./models');
+var models = require('./models');
 var Handlebars = require('handlebars');
 
 var splashTemplate = require('../templates/splash.hbs');
 var gameTemplate = require('../templates/fight.hbs');
+
 require('./pain.js');
+
+
+
+
+console.log('models', models);
+
 //make a page to select hero type from dropdown
 function startGame(){
+
+
+
+  // console.log(myHero);
+  // set selectedHero
+  // currentHero = models[selectedHero]
   $('#choose-character').html(splashTemplate());
 
-  $('.start-game').click(function(event){
-    $('#choose-character').html(gameTemplate());
+  $('.start-game').on('click', function(event){
+    event.preventDefault();
+    var myHero = $('.hero-select').val();
+    var myVillian = $('.villian-select').val();
+
+    $('#choose-character').empty();
+    $('#choose-character').append(gameTemplate(models[myHero]));
+    $('#choose-character').append(gameTemplate(models[myVillian]));
   });
 }
+startGame();
+
+
 startGame();
 
 
@@ -45,3 +67,7 @@ startGame();
 //show damage to user in health bar
 
 //set whoevers health is at 0 looses
+
+
+
+var badGuy = bart;
