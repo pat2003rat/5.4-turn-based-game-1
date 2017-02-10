@@ -6,8 +6,6 @@ var Handlebars = require('handlebars');
 var splashTemplate = require('../templates/splash.hbs');
 var gameTemplate = require('../templates/fight.hbs');
 
-require('./pain.js');
-
 
 
 
