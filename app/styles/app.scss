@@ -15,6 +15,7 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
 img {
   max-width: 100%;
 }
+
 .springfield{
   width: 100%;
   z-index: 5;
@@ -50,4 +51,11 @@ margin-left: 373px;
 height: 364px;
 width: 246px;
 z-index: 10;
+
+.splash-form {
+  text-align: center;
+}
+
+.start-game {
+  margin-top: 50px;
 }
