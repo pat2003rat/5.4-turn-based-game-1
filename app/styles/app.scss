@@ -4,11 +4,16 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
 
 // Import Bootstrap
 @import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+@import '../../node_modules/csshake/scss/csshake.scss';
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+*{
+  font-family: 'Gloria Hallelujah', cursive;
+  font-weight: bolder;
 }
 
 img {
@@ -21,11 +26,24 @@ img {
 }
 .bart{
   position: absolute;
-  margin-top: -526px;
+  margin-top: -503px;
     margin-left: 673px;
   height: 200px;
   width: 100px;
   z-index: 10;
+}
+.health-bar-hero{
+  position: absolute;
+  width: 175px;
+  height: 20px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  background-color: red;
+  border: 2px solid red;
+  z-index: 10;
+  margin-top: -550px;
+  margin-left: 700px;
 }
 .lisa{
   position: absolute;
@@ -43,6 +61,30 @@ img {
   width: 200px;
   z-index: 10;
 }
+.hank{
+  position: absolute;
+  margin-top: -611px;
+  margin-left: 373px;
+  height: 400px;
+  width: 250px;
+  z-index: 10;
+}
+meter{
+  -webkit-appearance: none;
+}
+.health-bar-villain{
+  position: absolute;
+  width: 175px;
+  height: 20px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  background-color: red;
+  border: 2px solid red;
+  z-index: 10;
+  margin-top: -641px;
+  margin-left: 445px;
+}
 .krusty{
   position: absolute;
 margin-top: -588px;
@@ -51,11 +93,48 @@ height: 364px;
 width: 246px;
 z-index: 10;
 }
-
-.splash-form {
+.splash-form{
   text-align: center;
+  margin-top: -500px;
+  font-size: 50px;
+  color: white;
+
+  font-family: 'Gloria Hallelujah', cursive;
+
 }
 
 .start-game {
-  margin-top: 50px;
+  width: 320px;
+  height: 75px;
+  // background-color: #A67842;
+  background-color: transparent;
+  border-color: transparent;
+}
+.start-game:hover{
+  background-color: white;
+  color: black;
+}
+.action{
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.option3{
+  font-size: 45px;
+  font-weight: bold;
+  font-family: 'Gloria Hallelujah', cursive;
+  color: white;
+}
+.option2{
+  position: relative;
+  font-size: 45px;
+  font-weight: bold;
+  font-family: 'Gloria Hallelujah', cursive;
+  color: white;
+  margin-top: -700px;
+}
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    width: 150px;
+    margin: 0;
 }

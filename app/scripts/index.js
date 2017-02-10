@@ -5,7 +5,7 @@ var Handlebars = require('handlebars');
 
 var splashTemplate = require('../templates/splash.hbs');
 var gameTemplate = require('../templates/fight.hbs');
-
+require('./pain.js');
 //make a page to select hero type from dropdown
 function startGame(){
   $('#choose-character').html(splashTemplate());
@@ -14,7 +14,7 @@ function startGame(){
     $('#choose-character').html(gameTemplate());
   });
 }
-
+startGame();
 
 
 

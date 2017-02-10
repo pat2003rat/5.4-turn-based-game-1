@@ -1,13 +1,23 @@
 
+
 <div class="row">
   <div class="col-md-12">
 <!-- =========== background for fight scene ============== -->
     <img id="springfield" class="springfield" src="images/springfield.jpg" alt="">
 <!-- ============== heros ============= -->
-    <img id="lisa" class="lisa" src="images/lisa.png" alt="">
-    <img id="bart" class="bart" src="images/BARTslingshot-psd.png" alt="">
+    <!-- <img id="lisa" class="lisa shake-vertical" src="images/lisa.png" alt=""> -->
+      <!-- <hr class="health-bar-hero"> -->
+      <meter class="health-bar-hero" value="" min="0" max="100">Health</meter>
+    <img id="bart" class="bart shake-opacity" src="images/BARTslingshot-psd.png" alt="">
 <!-- =============== villains ================ -->
-    <img id="krusty" class="krusty" src="images/Krusty_The_Clown.png" alt="">
-    <img id="homer" class="homer" src="images/homer-doh.png" alt="">
+    <img id="krusty" class="krusty shake-hard" src="images/Krusty_The_Clown.png" alt="">
+
+      <meter class="health-bar-villain" value="" min="0" max="100">Health</meter>
+    <img id="homer" class="homer shake-slow" src="images/homer-doh.png" alt="">
+    <select class="action" name="">
+      <option value="slap">slap</option>
+      <option value="pull-hair">Pull Hair</option>
+      <option value="kick">Kick in the shin</option>
+    </select>
   </div>
 </div>
