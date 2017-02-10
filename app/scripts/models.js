@@ -4,8 +4,7 @@ var pain = require('./pain.js');
 
 function Character(config){
   this.health = 100 || {};
-
-}
+};
 
 /*
 *Hero prototype of Character
@@ -17,14 +16,23 @@ function Hero(options){
   };
 
   $.extend(this, defaults, options);
-}
+};
 
 Hero.prototype.attack = function(villain){
   if(pain.painInflicted()){
     villain.health -= 20;
-  }
-}
-// Hero.prototype = new Character ();
+  };
+
+Hero.prototype.kick = function(villain){
+  if(pain.painInflicted2()){
+    villain.health -= 30;
+  };
+
+Hero.prototype.donut = function(villain){
+  if(pain.painInflicted3()){
+    villain.health -= 50;
+  };
+};
 
 var bart = new Hero({
   // attack:
@@ -50,8 +58,7 @@ function Villian(options){
   };
 
   $.extend(this, defaults, options);
-
-}
+};
 
 var homer = new Villian({
   name: 'homer',
@@ -63,16 +70,11 @@ var krusty = new Villian({
   name: 'krusty',
   image: 'images/Krusty_The_Clown.png',
   animation: 'shake-hard'
-})
-
-// Villian.prototype = new Character(){
-//
-// }
+});
 
 module.exports = {
   "bart": bart,
   "lisa": lisa,
   "homer": homer,
   "krusty": krusty
-
-}
+};
