@@ -14,13 +14,12 @@ require('./pain.js');
 console.log('models', models);
 
 //make a page to select hero type from dropdown
-function startGame(){
-
-
+(function startGame(){
 
   // console.log(myHero);
   // set selectedHero
   // currentHero = models[selectedHero]
+  console.log($('#choose-character'));
   $('#choose-character').html(splashTemplate());
 
   $('.start-game').on('click', function(event){
@@ -32,17 +31,7 @@ function startGame(){
     $('#choose-character').append(gameTemplate(models[myHero]));
     $('#choose-character').append(gameTemplate(models[myVillian]));
   });
-}
-startGame();
-
-
-startGame();
-
-
-
-
-
-
+}());
 
 
 //make a page to select hero type from dropdown
