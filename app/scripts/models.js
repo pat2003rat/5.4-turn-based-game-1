@@ -22,11 +22,13 @@ Hero.prototype.attack = function(villain){
   if(pain.painInflicted()){
     villain.health -= 20;
   };
+};
 
 Hero.prototype.kick = function(villain){
   if(pain.painInflicted2()){
     villain.health -= 30;
   };
+};
 
 Hero.prototype.donut = function(villain){
   if(pain.painInflicted3()){
