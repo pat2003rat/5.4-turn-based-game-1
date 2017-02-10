@@ -1,4 +1,5 @@
 var $ = require ('jquery');
+var pain = require('./pain.js');
 
 
 function Character(config){
@@ -19,7 +20,9 @@ function Hero(options){
 }
 
 Hero.prototype.attack = function(villain){
-  villain.health -= 20;
+  if(pain.painInflicted()){
+    villain.health -= 20;
+  }  
 }
 // Hero.prototype = new Character ();
 
