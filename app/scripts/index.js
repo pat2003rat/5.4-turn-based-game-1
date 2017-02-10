@@ -7,11 +7,13 @@ var splashTemplate = require('../templates/splash.hbs');
 var gameTemplate = require('../templates/fight.hbs');
 
 //make a page to select hero type from dropdown
+function startGame(){
   $('#choose-character').html(splashTemplate());
 
   $('.start-game').click(function(event){
     $('#choose-character').html(gameTemplate());
-  })
+  });
+}
 
 
 

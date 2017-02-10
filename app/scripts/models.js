@@ -1,7 +1,8 @@
-// var $ = require ('jquery');
-//
-//
-// function Character(){
+var $ = require ('jquery');
+
+
+// function Character(config){
+//   this.health = 100 || {};
 //
 // }
 //
