@@ -20,6 +20,7 @@ var gameTemplate = require('../templates/fight.hbs');
     $('#choose-character').empty();
     $('#choose-character').append(gameTemplate(models[myHero], models[myVillian]));// currentHero = models[selectedHero]
     // $('#choose-character').append(gameTemplate(models[myVillian]));
+
   });
 }());
 
