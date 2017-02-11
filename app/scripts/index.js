@@ -18,8 +18,8 @@ var gameTemplate = require('../templates/fight.hbs');
     var myVillian = $('.villian-select').val();
 
     $('#choose-character').empty();
-    $('#choose-character').append(gameTemplate(models[myHero]));// currentHero = models[selectedHero]
-    $('#choose-character').append(gameTemplate(models[myVillian]));
+    $('#choose-character').append(gameTemplate(models[myHero], models[myVillian]));// currentHero = models[selectedHero]
+    // $('#choose-character').append(gameTemplate(models[myVillian]));
   });
 }());
 

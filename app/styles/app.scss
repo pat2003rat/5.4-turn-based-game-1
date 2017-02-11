@@ -90,6 +90,7 @@ width: 246px;
 z-index: 10;
 }
 .splash-form{
+
   text-align: center;
   // margin-top: -500px;
   font-size: 50px;
@@ -100,6 +101,7 @@ z-index: 10;
 }
 
 .start-game {
+  margin-top: 125px;
   width: 320px;
   height: 75px;
   // background-color: #A67842;
@@ -116,19 +118,28 @@ z-index: 10;
 }
 .option3{
   font-size: 45px;
+  text-align: center;
   font-weight: bold;
   font-family: 'Gloria Hallelujah', cursive;
   color: white;
 }
 .option2{
   position: relative;
+  text-align: center;
   font-size: 45px;
   font-weight: bold;
   font-family: 'Gloria Hallelujah', cursive;
   color: white;
   // margin-top: -700px;
 }
+.option1{
+  text-align: center;
+margin-left: 550px;
+font-size: 35px;
+margin-top: 115px;
+}
 button, input, optgroup, select, textarea {
+
     color: inherit;
     font: inherit;
     width: 150px;
