@@ -15,11 +15,11 @@ var gameTemplate = require('../templates/fight.hbs');
   $('.start-game').on('click', function(event){
     event.preventDefault();
     var myHero = $('.hero-select').val();// set selectedHero
-    var myVillian = $('.villian-select').val();
+    // var myVillian = $('.villian-select').val();
 
     $('#choose-character').empty();
     $('#choose-character').append(gameTemplate(models[myHero]));// currentHero = models[selectedHero]
-    $('#choose-character').append(gameTemplate(models[myVillian]));
+    // $('#choose-character').append(gameTemplate(models[myVillian]));
   });
 }());
 
