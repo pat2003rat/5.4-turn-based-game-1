@@ -45,13 +45,13 @@ img {
   background-color: red;
   border: 2px solid red;
   z-index: 10;
-  // margin-top: -550px;
-  // margin-left: 700px;
+  margin-top: 200px;
+  margin-left: 700px;
 }
 .lisa{
   position: absolute;
-    // margin-top: -509px;
-    // margin-left: 704px;
+    margin-top: 240px;
+    margin-left: 704px;
     height: 200px;
     width: 129px;
     z-index: 10;
@@ -64,14 +64,7 @@ img {
   width: 200px;
   z-index: 10;
 }
-.hank{
-  position: absolute;
-  // margin-top: -611px;
-  margin-left: 373px;
-  height: 400px;
-  width: 250px;
-  z-index: 10;
-}
+
 meter{
   -webkit-appearance: none;
 }
@@ -85,18 +78,19 @@ meter{
   background-color: red;
   border: 2px solid red;
   z-index: 10;
-  // margin-top: -641px;
-  // margin-left: 445px;
+  margin-top: 105px;
+  margin-left: 445px;
 }
 .krusty{
   position: absolute;
-// margin-top: -588px;
-// margin-left: 373px;
+margin-top: 105px;
+margin-left: 400px;
 height: 364px;
 width: 246px;
 z-index: 10;
 }
 .splash-form{
+
   text-align: center;
   // margin-top: -500px;
   font-size: 50px;
@@ -107,6 +101,7 @@ z-index: 10;
 }
 
 .start-game {
+  margin-top: 125px;
   width: 320px;
   height: 75px;
   // background-color: #A67842;
@@ -123,19 +118,28 @@ z-index: 10;
 }
 .option3{
   font-size: 45px;
+  text-align: center;
   font-weight: bold;
   font-family: 'Gloria Hallelujah', cursive;
   color: white;
 }
 .option2{
   position: relative;
+  text-align: center;
   font-size: 45px;
   font-weight: bold;
   font-family: 'Gloria Hallelujah', cursive;
   color: white;
   // margin-top: -700px;
 }
+.option1{
+  text-align: center;
+margin-left: 550px;
+font-size: 35px;
+margin-top: 115px;
+}
 button, input, optgroup, select, textarea {
+
     color: inherit;
     font: inherit;
     width: 150px;
