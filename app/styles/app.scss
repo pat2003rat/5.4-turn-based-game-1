@@ -35,6 +35,14 @@ img {
   width: 100px;
   z-index: 10;
 }
+.ned{
+  position: absolute;
+    margin-left: 760px;
+    margin-top: 211px;
+    height: 284px;
+    width: 171px;
+    z-index: 10;
+}
 .health-bar-hero{
   position: absolute;
   width: 175px;
@@ -54,6 +62,14 @@ img {
     margin-left: 704px;
     height: 200px;
     width: 129px;
+    z-index: 10;
+}
+.nelson{
+  position: absolute;
+    margin-top: 183px;
+    margin-left: 400px;
+    height: 340px;
+    width: 186px;
     z-index: 10;
 }
 .homer{
@@ -83,11 +99,11 @@ meter{
 }
 .krusty{
   position: absolute;
-margin-top: 105px;
-margin-left: 400px;
-height: 364px;
-width: 246px;
-z-index: 10;
+  margin-top: 167px;
+  margin-left: 400px;
+  height: 364px;
+  width: 246px;
+  z-index: 10;
 }
 .splash-form{
 
@@ -144,4 +160,12 @@ button, input, optgroup, select, textarea {
     font: inherit;
     width: 150px;
     margin: 0;
+}
+.fight{
+  color: white;
+  position: absolute;
+  margin-left: 700px;
+  margin-top: 150px;
+  border-radius: 10px;
+  background-color: purple;
 }
