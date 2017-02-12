@@ -8,11 +8,10 @@ var painInflicted = function(){
   var randomNum = _.random(1, 2)
 
   if (randomNum == 1){
-  return true
+    return true
   }else{
-      return false
+    return false
     }
-
 };
 console.log(painInflicted());
 

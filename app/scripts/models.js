@@ -12,11 +12,14 @@ function Character(config){
 
 function Hero(options){
   var defaults = {
-    health: 100
+    health: 100,
+    autoTurn: false
   };
 
   $.extend(this, defaults, options);
-};
+  };
+
+Hero.prototype = new Character();
 
 Hero.prototype.attack = function(villain){
   if(pain.painInflicted()){
@@ -25,30 +28,27 @@ Hero.prototype.attack = function(villain){
 };
 
 Hero.prototype.kick = function(villain){
-  if(pain.painInflicted2()){
-    villain.health -= this.kick;
+    if(pain.painInflicted2()){
+      villain.health -= this.kick;
+    };
   };
-};
 
 Hero.prototype.donut = function(villain){
-  if(pain.painInflicted3()){
-    villain.health -= this.donut;
+    if(pain.painInflicted3()){
+      villain.health -= this.donut;
+    };
   };
-};
 
 var bart = new Hero({
-  // attack:
   name: "bart",
   image: "images/BARTslingshot-psd.png",
   animation: "shake-opacity",
   attack: 10,
   kick: 30,
   donut: 50
-
 });
 
 var lisa = new Hero({
-  // attack:
   name: "lisa",
   image: "images/lisa.png",
   animation: 'shake-vertical',
@@ -57,17 +57,29 @@ var lisa = new Hero({
   donut: 41
 });
 
+var ned = new Hero({
+  name: "ned",
+  image: "images/Ned_Flanders.png",
+  animation: 'shake-vertical',
+  attack: 10,
+  kick: 15,
+  donut: 55
+});
+
 /*
 *Villains prototype of Character
 */
 
 function Villain(options){
   var defaults = {
-    health: 100
+    health: 100,
+    autoTurn: true
   };
 
   $.extend(this, defaults, options);
 };
+
+Villain.prototype = new Character();
 
 Villain.prototype.attack = function(villain){
   if(pain.painInflicted()){
@@ -77,16 +89,17 @@ Villain.prototype.attack = function(villain){
 
 
   Villain.prototype.sneeze = function(villain){
-    if(pain.painInflicted()){
-      hero.health -= this.attack;
+    if(pain.painInflicted2()){
+      hero.health -= this.sneeze;
     };
   };
 
     Villain.prototype.burp = function(villain){
-      if(pain.painInflicted()){
-        hero.health -= this.attack;
+      if(pain.painInflicted3()){
+        hero.health -= this.burp;
       };
 };
+
 var homer = new Villain({
   name: 'homer',
   image: 'images/homer-doh.png',
@@ -105,9 +118,23 @@ var krusty = new Villain({
   burp: 32
 });
 
+var nelson = new Villain({
+  name: 'nelson',
+  image: 'images/Nelson_Muntz.png',
+  animation: 'shake-hard',
+  attack: 28,
+  sneeze: 15,
+  burp: 40
+});
+
+var villains = ["homer", "krusty", "nelson"];
+
+
 module.exports = {
   "bart": bart,
   "lisa": lisa,
+  "ned": ned,
   "homer": homer,
-  "krusty": krusty
+  "krusty": krusty,
+  "nelson": nelson,
 };
