@@ -2,8 +2,9 @@ var $ = require ('jquery');
 var pain = require('./pain.js');
 
 
-function Character(config){
-  this.health = 100 || {};
+function Character(options){
+  var options = options || {};
+  
 };
 
 /*
@@ -17,27 +18,26 @@ function Hero(options){
   };
 
   $.extend(this, defaults, options);
-  };
-
+};
 Hero.prototype = new Character();
 
-Hero.prototype.attack = function(villain){
-  if(pain.painInflicted()){
-    villain.health -= this.attack;
-  };
-};
-
-Hero.prototype.kick = function(villain){
-    if(pain.painInflicted2()){
-      villain.health -= this.kick;
-    };
-  };
-
-Hero.prototype.donut = function(villain){
-    if(pain.painInflicted3()){
-      villain.health -= this.donut;
-    };
-  };
+// Hero.prototype.attack = function(villain){
+//   if(pain.painInflicted()){
+//     villain.health -= this.attack;
+//   };
+// };
+//
+// Hero.prototype.kick = function(villain){
+//     if(pain.painInflicted2()){
+//       villain.health -= this.kick;
+//     };
+//   };
+//
+// Hero.prototype.donut = function(villain){
+//     if(pain.painInflicted3()){
+//       villain.health -= this.donut;
+//     };
+//   };
 
 var bart = new Hero({
   name: "bart",
@@ -77,28 +77,29 @@ function Villain(options){
   };
 
   $.extend(this, defaults, options);
+
 };
 
 Villain.prototype = new Character();
 
-Villain.prototype.attack = function(villain){
-  if(pain.painInflicted()){
-    hero.health -= this.attack;
-  };
-};
-
-
-  Villain.prototype.sneeze = function(villain){
-    if(pain.painInflicted2()){
-      hero.health -= this.sneeze;
-    };
-  };
-
-    Villain.prototype.burp = function(villain){
-      if(pain.painInflicted3()){
-        hero.health -= this.burp;
-      };
-};
+// Villain.prototype.attack = function(villain){
+//   if(pain.painInflicted()){
+//     hero.health -= this.attack;
+//   };
+// };
+//
+//
+//   Villain.prototype.sneeze = function(villain){
+//     if(pain.painInflicted2()){
+//       hero.health -= this.sneeze;
+//     };
+//   };
+//
+//     Villain.prototype.burp = function(villain){
+//       if(pain.painInflicted3()){
+//         hero.health -= this.burp;
+//       };
+// };
 
 var homer = new Villain({
   name: 'homer',

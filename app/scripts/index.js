@@ -11,9 +11,9 @@ var gameTemplate = require('../templates/fight.hbs');
 var homer = models.homer;
 var krusty = models.krusty;
 var nelson = models.nelson;
-var randomArray = [homer, krusty, nelson];
+var villainArray = [homer, krusty, nelson];
 //chooses random villain and compiles to handlebars template
-var selectedVillain = randomArray[_.random(randomArray.length-1)];
+var selectedVillain = villainArray[_.random(villainArray.length-1)];
 var villainSource = $('#villain-template').html();
 var villainTemplate = Handlebars.compile(villainSource);
 
@@ -32,3 +32,16 @@ $('#choose-character').append(gameTemplate(models[selectedHero]));// currentHero
 //fills the .villian-input div in index.html with compiled villainTemplate above with the randomly selected villain from selectedVillain variable
 $(".villain-input").html(villainTemplate(selectedVillain));
   });
+
+//I couldnt figure out how to select the current hero health or attack to
+  //complete the function below
+
+// var selectedVillainHealth = selectedVillain.health;
+// console.log(selectedVillainHealth)
+//
+// $(document).on('click','.fight-button', function(event){
+// event.preventDefault();
+// selectedVillainHealth -= models[hero.attack]
+// $('.health-bar-villain').css("width", selectedVillainHealth + "%");
+// console.log(selectedVillainHealth)
+// });
