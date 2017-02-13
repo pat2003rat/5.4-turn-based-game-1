@@ -4,7 +4,10 @@ var pain = require('./pain.js');
 
 function Character(options){
   var options = options || {};
-  
+
+  this.attack = function(enemy){
+    enemy.health -= this.attack;
+  }
 };
 
 /*
@@ -127,8 +130,6 @@ var nelson = new Villain({
   sneeze: 15,
   burp: 40
 });
-
-var villains = ["homer", "krusty", "nelson"];
 
 
 module.exports = {
