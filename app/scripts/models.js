@@ -13,7 +13,6 @@ function Character(options){
 
 Character.prototype.attack = function(enemy) {
   enemy.health = enemy.health - this.attack;
-  $(document).trigger('health:changed');
 };
 /*
 *Hero prototype of Character
