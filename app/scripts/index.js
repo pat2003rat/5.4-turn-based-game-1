@@ -6,7 +6,7 @@ var _ = require('underscore');
 //these variables are the splash.hbs file and the fight.hbs files
 var splashTemplate = require('../templates/splash.hbs');
 var gameTemplate = require('../templates/fight.hbs');
-
+var villainTemplate = require('../templates/villain.hbs');
 
 //selects the villains from models.js
 var bart = new models.Hero({
@@ -74,9 +74,6 @@ var nelson = new models.Villain({
 var villainArray = [homer, krusty, nelson];
 
 var selectedVillain = villainArray[_.random(villainArray.length-1)];
-var villainSource = $('#villain-template').html();
-var villainTemplate = Handlebars.compile(villainSource);
-
 var selectedHero;
 
 $('#choose-character').html(splashTemplate());
@@ -84,25 +81,24 @@ $('#choose-character').html(splashTemplate());
 $('.start-game').on('click', function(event){
   event.preventDefault();
 
-selectedHero = heroArray.pop(function(hero){
-  return hero.name == $('.hero-select').val();
-});
-
-$('#choose-character').empty();
-$('#choose-character').append(gameTemplate(selectedHero));
-
-$(".villain-input").html(villainTemplate(selectedVillain));
+  selectedHero = heroArray.pop(function(hero){
+    return hero.name == $('.hero-select').val();
   });
+
+  $('#choose-character').empty();
+  $('#choose-character').append(gameTemplate(selectedHero));
+  $(".villain-input").append(villainTemplate(selectedVillain));
+});
 
 
 $(document).on('click','.fight-button', function(event){
-event.preventDefault();
-function counterAttack(enemy){
-selectedHero.health -= selectedVillain.attack
-// Character.attack(selectedVillain);
-$('.health-bar-hero').text(selectedHero.health + "%")
-}
-setTimeout(counterAttack, 2000);
-selectedVillain.health -= selectedHero.attack
-$('.health-bar-villain').text(selectedVillain.health + "%");
+  event.preventDefault();
+    function counterAttack(enemy){
+      selectedHero.health -= selectedVillain.attack
+      // Character.attack(selectedVillain);
+      $('.health-bar-hero').text(selectedHero.health + "%")
+    }
+  setTimeout(counterAttack, 2000);
+  selectedVillain.health -= selectedHero.attack
+  $('.health-bar-villain').text(selectedVillain.health + "%");
 });
