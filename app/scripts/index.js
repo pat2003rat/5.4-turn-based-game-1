@@ -7,6 +7,8 @@ var _ = require('underscore');
 var splashTemplate = require('../templates/splash.hbs');
 var gameTemplate = require('../templates/fight.hbs');
 var villainTemplate = require('../templates/villain.hbs');
+var winnerTemplate = require('../templates/winner.hbs')
+var loserTemplate = require('../templates/loser.hbs')
 
 //selects the villains from models.js
 var bart = new models.Hero({
@@ -14,7 +16,7 @@ var bart = new models.Hero({
   image: "images/BARTslingshot-psd.png",
   health: 120,
   animation: "shake-opacity",
-  attack: 10,
+  attack: 28,
   kick: 30,
   donut: 50
 });
@@ -24,7 +26,7 @@ var lisa = new models.Hero({
   image: "images/lisa.png",
   health: 105,
   animation: 'shake-vertical',
-  attack: 14,
+  attack: 32,
   kick: 27,
   donut: 41
 });
@@ -34,7 +36,7 @@ var ned = new models.Hero({
   image: "images/Ned_Flanders.png",
   health: 99,
   animation: 'shake-vertical',
-  attack: 10,
+  attack: 30,
   kick: 15,
   donut: 55
 });
@@ -76,6 +78,8 @@ var villainArray = [homer, krusty, nelson];
 var selectedVillain = villainArray[_.random(villainArray.length-1)];
 var selectedHero;
 
+
+
 $('#choose-character').html(splashTemplate());
 
 $('.start-game').on('click', function(event){
@@ -90,15 +94,35 @@ $('.start-game').on('click', function(event){
   $(".villain-input").append(villainTemplate(selectedVillain));
 });
 
+function villainAttack(){
+  selectedHero.health -= selectedVillain.attack
+  // Character.attack(selectedVillain);
+  $('.health-bar-hero').text(selectedHero.health)
+}
+
+function heroAttack(){
+  selectedVillain.health -= selectedHero.attack
+  $('.health-bar-villain').text(selectedVillain.health);
+}
+
+function endGame(){
+  if(selectedVillain.health <= 0) {
+    console.log(selectedVillain.health)
+    $('#choose-character').empty();
+    $('#choose-character').append(winnerTemplate())
+  } else if(selectedHero.health <= 0) {
+    $('#choose-character').empty();
+    $('#choose-character').append(looserTemplate())
+      }
+}
 
 $(document).on('click','.fight-button', function(event){
   event.preventDefault();
     function counterAttack(enemy){
-      selectedHero.health -= selectedVillain.attack
-      // Character.attack(selectedVillain);
-      $('.health-bar-hero').text(selectedHero.health + "%")
+      villainAttack();
+      endGame();
     }
-  setTimeout(counterAttack, 2000);
-  selectedVillain.health -= selectedHero.attack
-  $('.health-bar-villain').text(selectedVillain.health + "%");
+    setTimeout(counterAttack, 2000);
+      heroAttack();
+      endGame();
 });
