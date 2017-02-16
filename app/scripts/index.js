@@ -3,14 +3,13 @@ var $ =  require('jquery');
 var models = require('./models');
 var Handlebars = require('handlebars');
 var _ = require('underscore');
-//these variables are the splash.hbs file and the fight.hbs files
+
 var splashTemplate = require('../templates/splash.hbs');
 var gameTemplate = require('../templates/fight.hbs');
 var villainTemplate = require('../templates/villain.hbs');
 var winnerTemplate = require('../templates/winner.hbs')
 var loserTemplate = require('../templates/loser.hbs')
 
-//selects the villains from models.js
 var bart = new models.Hero({
   name: "bart",
   image: "images/BARTslingshot-psd.png",
@@ -78,8 +77,6 @@ var villainArray = [homer, krusty, nelson];
 var selectedVillain = villainArray[_.random(villainArray.length-1)];
 var selectedHero;
 
-
-
 $('#choose-character').html(splashTemplate());
 
 $('.start-game').on('click', function(event){
@@ -107,12 +104,13 @@ function heroAttack(){
 
 function endGame(){
   if(selectedVillain.health <= 0) {
-    console.log(selectedVillain.health)
     $('#choose-character').empty();
-    $('#choose-character').append(winnerTemplate())
+    $('.villain-input').empty();
+    $('#choose-character').append(winnerTemplate());
+    $('#choose-character').append(gameTemplate(selectedHero));
   } else if(selectedHero.health <= 0) {
     $('#choose-character').empty();
-    $('#choose-character').append(looserTemplate())
+    $('#choose-character').append(looserTemplate());
       }
 }
 
@@ -124,5 +122,5 @@ $(document).on('click','.fight-button', function(event){
     }
     setTimeout(counterAttack, 2000);
       heroAttack();
-      endGame();
+      // endGame();
 });
