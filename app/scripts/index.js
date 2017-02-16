@@ -7,8 +7,8 @@ var _ = require('underscore');
 var splashTemplate = require('../templates/splash.hbs');
 var gameTemplate = require('../templates/fight.hbs');
 var villainTemplate = require('../templates/villain.hbs');
-var winnerTemplate = require('../templates/winner.hbs')
-var loserTemplate = require('../templates/loser.hbs')
+var winnerTemplate = require('../templates/winner.hbs');
+var loserTemplate = require('../templates/loser.hbs');
 
 var bart = new models.Hero({
   name: "bart",
@@ -77,14 +77,14 @@ var villainArray = [homer, krusty, nelson];
 var selectedVillain = villainArray[_.random(villainArray.length-1)];
 var selectedHero;
 
-$('#choose-character').html(splashTemplate());
+$('#choose-character').html(splashTemplate({heros: heroArray}));
 
 $('.start-game').on('click', function(event){
   event.preventDefault();
-
-  selectedHero = heroArray.pop(function(hero){
-    return hero.name == $('.hero-select').val();
-  });
+  //selects the index value of the .hero-select and
+  //sets selected hero equal to the heroArray index
+  //value equal to .hero-select index
+  selectedHero = heroArray[$('.hero-select').val()];
 
   $('#choose-character').empty();
   $('#choose-character').append(gameTemplate(selectedHero));
