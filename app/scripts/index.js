@@ -16,8 +16,8 @@ var bart = new models.Hero({
   health: 120,
   animation: "shake-opacity",
   attack: 28,
-  kick: 30,
-  donut: 50
+  // kick: 30,
+  // donut: 50
 });
 
 var lisa = new models.Hero({
@@ -26,8 +26,8 @@ var lisa = new models.Hero({
   health: 105,
   animation: 'shake-vertical',
   attack: 32,
-  kick: 27,
-  donut: 41
+  // kick: 27,
+  // donut: 41
 });
 
 var ned = new models.Hero({
@@ -36,8 +36,8 @@ var ned = new models.Hero({
   health: 99,
   animation: 'shake-vertical',
   attack: 30,
-  kick: 15,
-  donut: 55
+  // kick: 15,
+  // donut: 55
 });
 
 var heroArray = [bart, lisa, ned];
@@ -48,8 +48,8 @@ var homer = new models.Villain({
   health: 118,
   animation: 'shake-slow',
   attack: 19,
-  sneeze: 10,
-  burp: 30
+  // sneeze: 10,
+  // burp: 30
 });
 
 var krusty = new models.Villain({
@@ -58,8 +58,8 @@ var krusty = new models.Villain({
   health: 102,
   animation: 'shake-hard',
   attack: 21,
-  sneeze: 19,
-  burp: 32
+  // sneeze: 19,
+  // burp: 32
 });
 
 var nelson = new models.Villain({
@@ -68,8 +68,8 @@ var nelson = new models.Villain({
   health: 120,
   animation: 'shake-hard',
   attack: 28,
-  sneeze: 15,
-  burp: 40
+  // sneeze: 15,
+  // burp: 40
 });
 
 var villainArray = [homer, krusty, nelson];

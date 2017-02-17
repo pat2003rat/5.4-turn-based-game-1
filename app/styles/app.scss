@@ -43,6 +43,14 @@ img {
     width: 171px;
     z-index: 10;
 }
+.lisa{
+  position: absolute;
+    margin-top: 240px;
+    margin-left: 704px;
+    height: 200px;
+    width: 129px;
+    z-index: 10;
+}
 .health-bar-hero{
   position: absolute;
   width: 175px;
@@ -55,14 +63,6 @@ img {
   z-index: 10;
   margin-top: 200px;
   margin-left: 700px;
-}
-.lisa{
-  position: absolute;
-    margin-top: 240px;
-    margin-left: 704px;
-    height: 200px;
-    width: 129px;
-    z-index: 10;
 }
 .nelson{
   position: absolute;
@@ -80,7 +80,14 @@ img {
   width: 200px;
   z-index: 10;
 }
-
+.krusty{
+  position: absolute;
+  margin-top: 167px;
+  margin-left: 400px;
+  height: 364px;
+  width: 246px;
+  z-index: 10;
+}
 meter{
   -webkit-appearance: none;
 }
@@ -97,23 +104,12 @@ meter{
   margin-top: 105px;
   margin-left: 445px;
 }
-.krusty{
-  position: absolute;
-  margin-top: 167px;
-  margin-left: 400px;
-  height: 364px;
-  width: 246px;
-  z-index: 10;
-}
 .splash-form{
-
   text-align: center;
   // margin-top: -500px;
   font-size: 50px;
   color: white;
-
   font-family: 'Gloria Hallelujah', cursive;
-
 }
 
 .start-game {
@@ -150,9 +146,9 @@ meter{
 }
 .option1{
   text-align: center;
-margin-left: 550px;
-font-size: 35px;
-margin-top: 115px;
+  margin-left: 550px;
+  font-size: 35px;
+  margin-top: 115px;
 }
 button, input, optgroup, select, textarea {
 
